@@ -1,0 +1,203 @@
+* {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  background-color: black;
+  background-image: url("./images/Welcome.png");
+  background-size: 100vh;
+  background-repeat: no-repeat;
+  background-position: center 10vh;
+  background-attachment: fixed;
+}
+
+.hands {
+  height: 1em;
+  position: relative;
+  top: 20px;
+}
+
+.fist-section {
+  font-size: 200px;
+  margin: auto;
+  display: flex;
+  width: fit-content;
+  height: 100vh;
+  justify-content: center;
+  scale: 0.8;
+  align-items: center;
+}
+
+.snapemoji {
+  position: absolute;
+  z-index: -1;
+  height: 400px;
+  padding: 200px;
+}
+
+.welcome {
+  margin-top: 220px;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  display: flex;
+  padding: 10px 0;
+  background-color: rgba(107, 107, 107, 0.467);
+  backdrop-filter: blur(20px);
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+  font-size: 25px;
+  box-shadow: 10px 0 black;
+}
+
+.socials {
+  display: flex;
+  filter: contrast(100) invert();
+
+  justify-content: space-evenly;
+  position: relative;
+  margin-left: auto;
+  margin-right: 2vw;
+}
+
+.socials * {
+  margin: 0 10px;
+  width: 40px;
+}
+
+.links {
+  display: flex;
+  margin: auto 2vw;
+}
+
+.links * {
+  margin: 0 10px;
+}
+
+.second-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1228px;
+  margin: auto;
+  padding-bottom: 200px;
+}
+
+.hero1 {
+  height: 550px;
+  position: relative;
+  margin-left: auto;
+  filter: drop-shadow(0px 0px 30px rgb(0, 0, 0));
+}
+
+.mern {
+  height: 450px;
+  top: -30px;
+  position: relative;
+}
+
+.mern-intro {
+  align-items: center;
+  width: 40vw;
+}
+
+.mern-intro * {
+  margin: auto;
+  text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.third-section {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  padding-bottom: 200px;
+}
+.fourth-section {
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  padding-bottom: 200px;
+}
+
+.see {
+  display: flex;
+  margin: 0 10vw 5vh auto;
+  height: 200px;
+}
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr); /* 2 columns with equal width */
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.web-grid {
+  width: 550px;
+  height: auto;
+  backdrop-filter: blur(20px);
+  border-radius: 5px;
+}
+.img-grid *:hover {
+  scale: 1.1;
+  transition: 1s;
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 0 5px white;
+  padding: 20px;
+  border-radius: 20px;
+}
+.left-square {
+  margin: 10px;
+  margin-left: auto;
+}
+.right-square {
+  margin: 10px;
+  margin-right: auto;
+}
+.right-square,
+.left-square {
+  padding: 30px;
+
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.316);
+  border-radius: 10px;
+}
+.right-square *,
+.left-square * {
+  box-shadow: 0 0 10px 5px black;
+}
+.fourth-section .left-square {
+  position: relative;
+  top: 150px;
+}
+.third-section .left-square {
+  position: relative;
+  top: 150px;
+}
+.fifth-section{
+  background-color: white;
+  width: 100%;
+}
+.colour-grid{
+  display: flex;
+  margin: auto;
+  padding: 100px 0 ;
+}
+.waves{
+  mix-blend-mode: lighten;
+  filter: invert() contrast(200);
+  position:relative;
+  top: -250px;
+  padding:0 482px 0 482px;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 150px;
+}
