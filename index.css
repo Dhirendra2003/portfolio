@@ -19,6 +19,7 @@ html, body {
   padding: 0;
   color: white;
   scroll-snap-align: start;
+  scroll-behavior: smooth;
 }
 
 body {
