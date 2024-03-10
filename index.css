@@ -1,3 +1,15 @@
+html, body {
+  scroll-behavior: smooth;
+  height: 100vh;
+  
+  scroll-snap-type: y mandatory;
+}
+
+ 
+
+ .second-section{
+  scroll-snap-align: start;
+}
 * {
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
@@ -6,6 +18,7 @@
   margin: 0;
   padding: 0;
   color: white;
+  scroll-snap-align: start;
 }
 
 body {
@@ -24,7 +37,7 @@ body {
   top: 20px;
 }
 
-.fist-section {
+.first-section {
   font-size: 200px;
   margin: auto;
   display: flex;
@@ -154,9 +167,9 @@ nav {
   
 }
 .img-grid *:hover {
-  scale: 1.1;
+  transform: scale(1.1);
   transition: 1s;
-  z-index: 10;
+  z-index: 4;
   position: relative;
   border-radius: 20px;
   padding: 20px;
@@ -255,15 +268,20 @@ video{
 }
 footer{
   display: flex;
-  background-color:#303031 ;
+  background-color:#303031d1 ;
+  
   max-width: 100%;
-  padding:50px 0 ;
+  padding:0px 0 ;
   overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
 }
 footer>img{
   height: 250px;
   filter: brightness(2);
   mix-blend-mode: lighten;
+  
+  
 }
 .footer-left {
   position: relative;
@@ -271,14 +289,14 @@ footer>img{
 }
 .footer-right {
   position: relative;
-  margin-left: auto;
+  margin-left: 0;
   left: 200px;
 }
 .footer-links{
   margin: 20px;
-  font-size: 1.5em;
-  text-align: center;
-  width: 200px;
+  font-size: 1.3em;
+  text-align: left;
+  
   line-height: 1.2;
   justify-content: space-evenly;
   align-items: baseline;
@@ -286,7 +304,64 @@ footer>img{
 }
 .footer-links>*{
   color:#C6A1FF ;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  
+  width: 200px;
+}
+.parent-footer{
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  position:relative;
+}
+.footer-links>h2{
+  padding-bottom: 10px;
+  
+}
+.floater-contact{
+  position: fixed;
+  rotate: -90deg;
+  top:200px;
+  right: -50px;
+  padding: 15px 15px 30px 15px ;
+  color: green;
+  border-radius: 20px 20px 0 0;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: white;
+  animation: pop-left 0.5s ease-in-out 5s;
+}
+.upscroll{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+}
+.upscroll >img{
+  height: 30px;
+  fill: white;
+  border: 3px rgb(102, 102, 102) solid;
+  padding: 10px;
+  border-radius: 50px;
+  margin: 15px;
+  transition: 0.5s;
+}
+.upscroll >img:hover{
+  padding-bottom: 20px;
+  transition: 0.5s;
+}
+@keyframes pop-left{
+  0%{
+    transform: translateY(30px);
+    opacity: 100%;
+  }
+  90%{
+    transform: translateY(-10px);
+    opacity: 100%;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 100%;
+  }
 }
 
 @keyframes slowBlink {
@@ -294,7 +369,7 @@ footer>img{
     opacity: 1;
   }
   50%{
-    opacity: 0.6;
+    opacity: 0.7;
   }
   100%{
     opacity: 1;

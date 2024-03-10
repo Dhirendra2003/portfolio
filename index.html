@@ -9,8 +9,10 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.25" />
-    <title>Document</title>
+    <title>Dhirendra Portfolio</title>
     <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./loader.css" />
+    <script src="./js/jquery.min.js"></script>
   </head>
 
   <body>
@@ -29,7 +31,7 @@
       </div>
     </nav>
 
-    <div class="fist-section" data-tilt data-tilt-reverse="true">
+    <div id="first-section" class="first-section" data-tilt data-tilt-reverse="true">
       <img src="./images/snap emoji.png" class="snapemoji" />
       <div class="welcome">
         <img src="./images/prayemoji.png" class="hands" />WELCOME
@@ -135,7 +137,8 @@
       </div>
     </div>
     <footer>
-      <img src="./images/footerleft.png" class="footer-left">
+      <img src="./images/footerleft.png" class="footer-left" />
+      <div class="parent-footer">
       <div class="footer-links">
         <h2>Social Media:</h2>
         <p>Instagram</p>
@@ -149,22 +152,34 @@
         <p>shindedhirendra780</p>
         <p>@gmail.com</p>
         <p>+91 7507366162</p>
-        
       </div>
       <div class="footer-links">
         <h2>My Project:</h2>
         <p>Trading practice Java</p>
-        <p>Ecommerce MERN </p>
+        <p>Ecommerce MERN</p>
         <p>Job scrapper PHP&py</p>
-
       </div>
       <div class="footer-links">
         <h2>My Profiles:</h2>
         <p>React-native Intern</p>
         <p>Fullstack DEV at Techtorch</p>
       </div>
-      <img src="./images/footerright.png" class="footer-right">
+    </div>
+      <img src="./images/footerright.png" class="footer-right" />
     </footer>
+
+    <div class="floater-contact">
+        CONTACT ME <img src="./images/phone emoji.png" style="height: 20px;">
+    </div>
+
+    <a href="#first-section" class="upscroll">
+      <img src="./images/arrow.svg" alt="">
+    </a>
+
+    <div class="loader" id="loader">
+      <div class="square-circle-8"></div>
+    </div>
     <script src="./js/tilt.js"></script>
+    <script src="./js/hide.js"></script>
   </body>
 </html>
