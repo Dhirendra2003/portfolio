@@ -146,3 +146,27 @@ function scrollToTop() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
+
+//pop up animations:
+document.addEventListener("DOMContentLoaded", function () {
+  const animatedElement = document.getElementById("hero1");
+
+  // Function to handle the intersection observer callback
+  function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log("fade in running")
+        // Add the "show" class when the element is in view
+        animatedElement.classList.add("hero1-animated");
+        // Disconnect the observer once animation is triggered (optional)
+        observer.disconnect();
+      }
+    });
+  }
+
+  // Create an intersection observer
+  const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+  // Start observing the animated element
+  observer.observe(animatedElement);
+});

@@ -163,6 +163,10 @@ nav {
   position: relative;
   margin-left: auto;
   filter: drop-shadow(0px 0px 30px rgb(0, 0, 0));
+  opacity: 0.1;
+}
+.hero1-animated{
+  animation: fadein ease-in-out 1s forwards;
 }
 
 .mern {
@@ -458,4 +462,19 @@ background:linear-gradient(to right ,rgb(59, 255, 59),rgb(58, 166, 255));
   100%{
     opacity: 1;
   }
+}
+
+@keyframes fadein {
+  0%{
+    position: relative;
+    transform: translateX(-10000px);
+    scale: 0.4;
+    opacity: 0;
+}
+100%{
+  position: relative;
+  transform: translateX(0);
+  scale:1;
+  opacity: 1;
+}
 }
