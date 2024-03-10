@@ -63,6 +63,9 @@ document.addEventListener('scroll', () => {
   hoverBall.style.transform = `translate(${x}px, ${y}px)`;
 });
 
+
+
+
 //nav scroll blur bg
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.getElementById("navbar");
@@ -86,4 +89,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Event listener for scroll events
   window.addEventListener("scroll", handleScroll);
+});
+
+//bg fade section 2
+document.addEventListener("DOMContentLoaded", function () {
+  const herodiv = document.getElementById("second-section");
+  console.log('bg blured')
+  // Function to handle scroll events
+  function handleScroll2() {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    // Check if the scroll position is greater than a certain threshold
+    if (scrollPosition > window.innerHeight*2/3) {
+      // Add a class when scrolled down
+      herodiv.classList.add("onscroll-second-section");
+    } else {
+      // Remove the class when scrolled back to the top
+      herodiv.classList.remove("onscroll-second-section");
+    }
+  }
+
+  // Initial call to set the class based on the initial scroll position
+  handleScroll2();
+
+  // Event listener for scroll events
+  window.addEventListener("scroll", handleScroll2);
+});
+
+//fist section fade up
+document.addEventListener("DOMContentLoaded", function () {
+  const herodiv = document.getElementById("first-section");
+  console.log('bg blured')
+  // Function to handle scroll events
+  function handleScroll3() {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    // Check if the scroll position is greater than a certain threshold
+    if (scrollPosition > 150) {
+      // Add a class when scrolled down
+      herodiv.classList.add("fade-first-section");
+    } else {
+      // Remove the class when scrolled back to the top
+      herodiv.classList.remove("fade-first-section");
+    }
+  }
+
+  // Initial call to set the class based on the initial scroll position
+  handleScroll3();
+
+  // Event listener for scroll events
+  window.addEventListener("scroll", handleScroll3);
 });
