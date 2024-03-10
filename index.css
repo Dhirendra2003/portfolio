@@ -1,15 +1,7 @@
 html, body {
   scroll-behavior: smooth;
-  height: 100vh;
-  
-  scroll-snap-type: y mandatory;
 }
 
- 
-
- .second-section{
-  scroll-snap-align: start;
-}
 * {
   font-family: "League Spartan", sans-serif;
   font-optical-sizing: auto;
@@ -17,9 +9,11 @@ html, body {
   font-style: normal;
   margin: 0;
   padding: 0;
-  color: white;
-  scroll-snap-align: start;
-  scroll-behavior: smooth;
+  color: white; 
+}
+*::selection{
+  background-color: yellow;
+  color: black;
 }
 
 body {
@@ -30,6 +24,21 @@ body {
   background-repeat: no-repeat;
   background-position: center 10vh;
   background-attachment: fixed;
+}
+
+.hover-ball {
+  width: 80px;
+  
+  height: 80px;
+  
+  background-color: #95ff00;
+  border-radius: 50%;
+  
+  position: fixed;
+  mix-blend-mode: difference;
+  z-index: +1;
+  pointer-events: none; /* Ensure the ball doesn't interfere with other elements */
+  transition: transform 0.1s ease-out; /* Optional: Add a smooth transition effect */
 }
 
 .hands {
@@ -71,8 +80,13 @@ nav {
   z-index: 10;
   font-size: 25px;
   box-shadow: 10px 0 black;
+  transition: 1s;
 }
-
+.nav-scroll{
+  background-color: rgba(131, 131, 131, 0.668);
+  backdrop-filter: blur(20px);
+  transition: 1s;
+}
 .socials {
   display: flex;
   filter: contrast(100) invert();
@@ -130,13 +144,13 @@ nav {
 }
 
 .third-section {
-  background-color: rgb(0, 0, 0);
+  background:linear-gradient( rgb(0, 0, 0), rgba(0, 0, 0, 0.712));
   width: 100%;
   padding-bottom: 200px;
 
 }
 .fourth-section {
-  background-color: rgb(0, 0, 0);
+  background:linear-gradient(  rgba(0, 0, 0, 0.712),rgb(0, 0, 0));
   width: 100%;
   padding-bottom: 200px;
 }
@@ -145,6 +159,13 @@ nav {
   display: flex;
   margin: 0 10vw 5vh auto;
   height: 200px;
+  mix-blend-mode: lighten;
+}
+.see2 {
+  display: flex;
+  margin: 0 10vw 5vh auto;
+  height: 200px;
+  
 }
 .img-grid {
   display: grid;
@@ -329,7 +350,9 @@ footer>img{
   font-weight: 500;
   cursor: pointer;
   background-color: white;
-  animation: pop-left 0.5s ease-in-out 5s;
+  animation: pop-left 0.5s ease-in-out 5s forwards;
+  box-shadow: 0px 0px 10px 0px black;
+  opacity: 0;
 }
 .upscroll{
   position: fixed;
