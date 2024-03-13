@@ -39,8 +39,8 @@ document.addEventListener('mousemove', (event) => {
   const hoverBall = document.getElementById('hoverBall');
 
   // Adjust the offset to center the ball on the cursor
-  const offsetX = -15;
-  const offsetY = -15;
+  const offsetX = -35;
+  const offsetY = -45;
 
   initialMouseX = event.clientX;
   initialMouseY = event.clientY;
