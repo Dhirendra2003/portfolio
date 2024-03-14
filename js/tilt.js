@@ -1,13 +1,31 @@
 var VanillaTilt = (function () {
   'use strict';
 
-  /**
-   * Created by Sergiu Șandor (micku7zu) on 1/27/2017.
-   * Original idea: https://github.com/gijsroge/tilt.js
-   * MIT License.
-   * Version 1.8.1
-   */
-
+  function isMobile(){
+    if(window.innerHeight>window.innerWidth){
+        return true;
+    }
+    else
+        false
+  }
+console.log(window.innerWidth, window.innerHeight)
+let wid=window.innerWidth;
+let height=window.innerHeight;
+function setRes(wid,height){
+    console.log(isMobile())
+    if(isMobile()){
+        document.getElementsByTagName('body').style.width = '100%';
+        document.getElementById('navbar').style.width =wid;
+        document.getElementById('first-section').style.width = '100%';
+        document.getElementById('first-section').style.height = height;
+        document.getElementById('second-section').style.width = '100%';
+        document.getElementById('third-section').style.width = '100%';
+        document.getElementById('fourth-section').style.width = '100%';
+        document.getElementById('fifth-section').style.width = '100%';
+    }
+    }
+    setRes(wid,height);
+  
   class VanillaTilt {
       constructor(element, settings = {}) {
           if (!(element instanceof Node)) {
@@ -486,7 +504,7 @@ var VanillaTilt = (function () {
       }
   }
 
-  if (typeof document !== "undefined") {
+  if (typeof document !== "undefined" && !isMobile()) {
       /* expose the class to window */
       window.VanillaTilt = VanillaTilt;
 
@@ -499,3 +517,4 @@ var VanillaTilt = (function () {
   return VanillaTilt;
 
 }());
+
