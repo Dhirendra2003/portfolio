@@ -430,6 +430,8 @@ footer>img{
 }
 .resume-button{
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .resume-download{
 margin:30px  auto ;
